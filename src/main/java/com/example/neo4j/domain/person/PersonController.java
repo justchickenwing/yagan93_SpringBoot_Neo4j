@@ -34,7 +34,7 @@ public class PersonController {
     }
 
     @PostMapping( "/{idHead}/isResponsibleFor/{idTail}/since/{year}")
-    public ResponseEntity<Person> worksWith(@PathVariable Long idHead, @PathVariable Long idTail,@PathVariable Integer year) {
+    public ResponseEntity<Person> isResponsibleFor(@PathVariable Long idHead, @PathVariable Long idTail,@PathVariable Integer year) {
         return new ResponseEntity<>(personService.isResponsibleFor(idHead,idTail,year), HttpStatus.CREATED);
     }
 }
